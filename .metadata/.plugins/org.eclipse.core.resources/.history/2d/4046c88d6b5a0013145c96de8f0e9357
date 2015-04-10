@@ -1,0 +1,121 @@
+package danielalmgrundstrom.txtedit.controller.data;
+
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+
+import danielalmgrundstrom.txtedit.beans.FontsRecievedEvent;
+import danielalmgrundstrom.txtedit.beans.IOErrorEvent;
+import danielalmgrundstrom.txtedit.beans.LoadFileEvent;
+import danielalmgrundstrom.txtedit.beans.LoadURLEvent;
+import danielalmgrundstrom.txtedit.beans.SaveEvent;
+import danielalmgrundstrom.txtedit.controller.Controller;
+import danielalmgrundstrom.txtedit.listeners.FontsRecievedListener;
+import danielalmgrundstrom.txtedit.listeners.IOErrorListener;
+import danielalmgrundstrom.txtedit.listeners.LoadClickedListener;
+import danielalmgrundstrom.txtedit.listeners.LoadCompleteListener;
+import danielalmgrundstrom.txtedit.listeners.LoadFileListener;
+import danielalmgrundstrom.txtedit.listeners.LoadURLListener;
+import danielalmgrundstrom.txtedit.listeners.SaveClickedListener;
+import danielalmgrundstrom.txtedit.listeners.SaveCompleteListener;
+import danielalmgrundstrom.txtedit.listeners.SaveListener;
+import danielalmgrundstrom.txtedit.ui.Window;
+
+public class IOController implements SaveClickedListener,
+									 LoadClickedListener,
+									 IOErrorListener,
+									 FontsRecievedListener{
+	
+	private SaveListener saveListener;
+	private LoadFileListener loadFileListener;
+	private LoadURLListener loadURLListener;
+	
+	private final JFileChooser fileChooser = new JFileChooser();
+	
+	private Window window;
+	
+	public IOController(Window window){
+		this.window = window;
+	}
+	
+	@Override
+	public void onSaveClicked(SaveEvent event) {
+		int returnValue = fileChooser.showSaveDialog(window);
+		
+		if(returnValue == JFileChooser.APPROVE_OPTION){
+			File file = fileChooser.getSelectedFile();
+			fireSaveEvent(file, event);
+		}
+		
+	}
+
+	@Override
+	public void onLoadFileClicked() {
+		int returnValue = fileChooser.showOpenDialog(window);
+		
+		if(returnValue == JFileChooser.APPROVE_OPTION){
+			File file = fileChooser.getSelectedFile();
+			fireLoadFileRequest(file);
+			//fileHandler.requestLoad(file);
+		}
+		
+	}
+	
+	@Override
+	public void onLoadURLClicked() {
+		try {
+			String input = JOptionPane.showInputDialog("Enter url to open: ");
+			
+			URL url = null;
+			
+			if (input != null){
+				url = new URL(input);
+				//fileHandler.requestLoad(url);
+				fireLoadURLRequest(url);
+			}
+			
+		} catch (MalformedURLException e){
+			
+		}
+	}
+	
+	public void setSaveListener(SaveListener saveListener){
+		this.saveListener = saveListener;
+	}
+	
+	public void setLoadFileListener(LoadFileListener loadFileListener){
+		this.loadFileListener = loadFileListener;
+	}
+	
+	public void setLoadURLListener(LoadURLListener loadURLListener){
+		this.loadURLListener = loadURLListener;
+	}
+	
+	public void fireSaveEvent(File file, SaveEvent event){
+		if (saveListener != null)
+			saveListener.onSaveRequest(file, event);
+	}
+	
+	public void fireLoadFileRequest(File file){
+		if (loadFileListener != null)
+			loadFileListener.onLoadFileRequest(file);
+	}
+	
+	public void fireLoadURLRequest(URL url){
+		if (loadURLListener != null)
+			loadURLListener.onLoadURLRequest(url);
+	}
+	
+	@Override
+	public void onIOError(IOErrorEvent event) {
+		window.showMessage(event.getErrorMessage());
+	}
+	
+	@Override
+	public void onFontsRecieved(FontsRecievedEvent event) {
+		window.setFontNames(event.getFontNames());
+	}
+}

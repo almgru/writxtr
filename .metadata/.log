@@ -1,0 +1,1835 @@
+!SESSION 2013-11-27 17:10:05.258 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -data /home/daniel/Java/Experiments -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-11-27 18:53:02.615
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-27 18:53:02.615
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@758f6c04,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1afcb6e8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2013-11-27 19:54:36.336
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+!SESSION 2013-11-28 08:20:10.581 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-28 08:37:51.460
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-3,5,main]" timed out waiting (5042ms) for thread "Thread[Worker-8,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "Worker-8".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-11-28 09:34:15.894 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-28 09:37:04.206
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-0,5,main]" timed out waiting (5012ms) for thread "Thread[main,6,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2013-11-28 09:37:24.391
+!MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl Window.java
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:481)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:418)
+	at org.eclipse.swt.widgets.Control.getVisible(Control.java:2915)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1408)
+	at org.eclipse.swt.widgets.Composite.setFocus(Composite.java:1408)
+	at org.eclipse.ui.texteditor.StatusTextEditor.setFocus(StatusTextEditor.java:120)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.setFocus(JavaEditor.java:2389)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.delegateSetFocus(CompatibilityPart.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:243)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:249)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:220)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:107)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.focusGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer$2.setFocus(ContributedPartRenderer.java:102)
+	at org.eclipse.swt.custom.CTabItem.setFocus(CTabItem.java:329)
+	at org.eclipse.swt.custom.CTabFolder.setFocus(CTabFolder.java:2528)
+	at org.eclipse.swt.widgets.Control.fixFocus(Control.java:206)
+	at org.eclipse.swt.widgets.Control.setVisible(Control.java:4791)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3068)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3076)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1772)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:279)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SESSION 2013-11-28 16:50:44.142 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-28 17:09:28.719
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-3,5,main]" timed out waiting (5085ms) for thread "Thread[main,6,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.jface 2 0 2013-11-28 19:09:11.935
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-28 19:09:11.935
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7f0fa949,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5d3338ca,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-11-28 21:18:05.449 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-28 21:28:26.838
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-5,5,main]" timed out waiting (5039ms) for thread "Thread[Worker-1,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-5,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "Worker-1".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-11-28 21:48:25.149 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-28 21:49:26.747
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-4,5,main]" timed out waiting (5011ms) for thread "Thread[main,6,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-11-29 21:19:37.850 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -data /home/daniel/Java/Experiments -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-11-29 22:47:42.099
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-29 22:47:42.099
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b747c3a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c87e254,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-11-30 10:35:04.020 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-11-30 11:01:59.900
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-30 11:01:59.901
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3aecb75b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@af9d596,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-11-30 12:13:33.323 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 12:21:44.158
+!MESSAGE Can't initialize AbstractMetricSource for FontChangedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 12:27:06.167
+!MESSAGE Can't initialize AbstractMetricSource for FontChangedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 12:31:16.419
+!MESSAGE Can't initialize AbstractMetricSource for FontChangedListener.java
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-30 12:38:19.545
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut", thread "Thread[Worker-11,5,main]" timed out waiting (5123ms) for thread "Thread[Worker-12,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-11,5,main]" is proceeding but "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "Worker-12".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:505)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:490)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 27 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:505)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:490)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 12:40:07.172
+!MESSAGE Can't initialize AbstractMetricSource for FontChangedListener.java
+
+!ENTRY org.eclipse.jface 2 0 2013-11-30 12:44:09.379
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-30 12:44:09.379
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b1e54fc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@445d8ab6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-11-30 16:58:28.062 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-11-30 17:04:56.278
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-1,5,main]" timed out waiting (5011ms) for thread "Thread[main,6,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:30:30.755
+!MESSAGE Can't initialize AbstractMetricSource for WindowControl.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:30:31.076
+!MESSAGE Can't initialize AbstractMetricSource for Controller.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:31.544
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.datacontroller not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:31.545
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:31.546
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:30:39.826
+!MESSAGE Can't initialize AbstractMetricSource for WindowControl.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:30:40.051
+!MESSAGE Can't initialize AbstractMetricSource for Controller.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:40.752
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.datacontroller not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:40.753
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:40.754
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:55.114
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.datacontroller not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:55.115
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:30:55.116
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:32:55.352
+!MESSAGE Can't initialize AbstractMetricSource for LoadRequestListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:32:55.353
+!MESSAGE Can't initialize AbstractMetricSource for SaveRequestListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:32:55.353
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:32:55.354
+!MESSAGE Can't initialize AbstractMetricSource for FontRequestListener.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:32:56.431
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:32:56.432
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:33:06.122
+!MESSAGE Can't initialize AbstractMetricSource for LoadRequestListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:33:06.123
+!MESSAGE Can't initialize AbstractMetricSource for SaveRequestListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:33:06.123
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 17:33:06.124
+!MESSAGE Can't initialize AbstractMetricSource for FontRequestListener.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:07.374
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:07.375
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:31.085
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:31.087
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:45.979
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:45.980
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:54.042
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:33:54.042
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:00.819
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:00.819
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:05.159
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:05.160
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:15.929
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:15.930
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:21.924
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:21.925
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:26.210
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:26.211
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:30.552
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:30.553
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:55.431
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:34:55.433
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:02.914
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:02.915
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:09.224
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:09.225
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:14.856
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:14.856
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:30.262
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:30.263
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:38.384
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:38.386
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:46.252
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:35:46.253
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:25.138
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:25.139
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:43.944
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:43.945
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:51.895
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:36:51.897
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:03.512
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:03.513
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:34.067
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:34.068
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:55.579
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:37:55.580
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:03.021
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:03.021
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:17.377
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:17.378
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:25.983
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:38:25.985
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:39:58.341
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:39:58.341
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:08.674
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:08.675
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:11.437
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:11.438
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:24.891
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:24.892
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:30.078
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:30.079
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:37.678
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:40:37.678
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:41:04.625
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:41:04.627
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:41:25.278
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:41:25.279
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:43:44.156
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:43:44.157
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:48:27.478
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 17:48:27.478
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY org.eclipse.jface 2 0 2013-11-30 17:50:49.960
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-11-30 17:50:49.960
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79a3aa8b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6811ca10,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:39:56.741
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:39:56.765
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.215
+!MESSAGE Can't initialize AbstractMetricSource for LoadURLListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.216
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.217
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.218
+!MESSAGE Can't initialize AbstractMetricSource for LoadClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.219
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.220
+!MESSAGE Can't initialize AbstractMetricSource for FontRequestListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:41:41.220
+!MESSAGE Can't initialize AbstractMetricSource for LoadFileListener.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:41:42.275
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:41:42.276
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:03.636
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:03.637
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.794
+!MESSAGE Can't initialize AbstractMetricSource for LoadURLListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.795
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.795
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.796
+!MESSAGE Can't initialize AbstractMetricSource for LoadClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.797
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:42:12.798
+!MESSAGE Can't initialize AbstractMetricSource for FontRequestListener.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:13.520
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:13.521
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:44.114
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:42:44.115
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:43:08.503
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:43:08.504
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:32.838
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:32.839
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:45.993
+!MESSAGE Can't initialize AbstractMetricSource for LoadURLListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:45.993
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:45.994
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:45.995
+!MESSAGE Can't initialize AbstractMetricSource for LoadClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:45.995
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:46.845
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:46.846
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:56.908
+!MESSAGE Can't initialize AbstractMetricSource for LoadURLListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:56.909
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:56.909
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:51:56.910
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:57.740
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:51:57.740
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:03.893
+!MESSAGE Can't initialize AbstractMetricSource for LoadURLListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:03.894
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:03.895
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:03.896
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:04.840
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:04.841
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:09.334
+!MESSAGE Can't initialize AbstractMetricSource for SaveClickedListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:09.335
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:09.336
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:10.218
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:10.219
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:15.947
+!MESSAGE Can't initialize AbstractMetricSource for SaveListener.java
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:15.948
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:16.904
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:16.905
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 4 4 2013-11-30 19:52:22.448
+!MESSAGE Can't initialize AbstractMetricSource for SaveEvent.java
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:23.492
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:23.492
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:33.769
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:33.770
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:52.112
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:52:52.113
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:13.206
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:13.207
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:17.705
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:17.706
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:27.885
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:27.891
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:32.920
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:32.921
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:41.275
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:53:41.276
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:00.862
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:00.862
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:10.427
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:10.428
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:17.305
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:17.306
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:33.799
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:54:33.800
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:00.142
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:00.142
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:19.433
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:19.434
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:29.337
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:29.338
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.toolbar not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:49.651
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:55:55.115
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:00.591
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:07.957
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:17.722
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:22.794
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:28.947
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:33.438
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:38.615
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:56:43.104
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:05.440
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:10.615
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:14.420
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:18.613
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:53.711
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-11-30 19:57:59.859
+!MESSAGE metrics for package =TextEditor/src<danielalmgrundstrom.txtedit.controller.ui.textarea not found.
+!SESSION 2013-12-01 09:56:25.255 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-12-01 10:17:12.554
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-4,5,main]" timed out waiting (5109ms) for thread "Thread[Worker-7,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "Worker-7".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-12-01 10:36:04.409 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-12-01 10:36:30.898
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2013-12-01 10:56:08.167
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-01 10:56:08.168
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f6b6089,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@128eeb1b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-12-01 11:39:51.323 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-12-01 12:04:18.718
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-01 12:04:18.719
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e97891b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3eaa73ec,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.ltk.core.refactoring 4 10009 2013-12-01 12:12:49.568
+!MESSAGE Participant 'org.eclipse.jdt.debug.refactoring.breakpoint.packageRename' removed due to the following exception
+!STACK 1
+org.eclipse.debug.core.DebugException: Resource '/Writxtr/src/danielalmgrundstrom/writxtr/data/system/FontHandler.java' does not exist.
+	at org.eclipse.debug.core.model.Breakpoint.run(Breakpoint.java:343)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaLineBreakpoint.<init>(JavaLineBreakpoint.java:159)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaLineBreakpoint.<init>(JavaLineBreakpoint.java:132)
+	at org.eclipse.jdt.debug.core.JDIDebugModel.createLineBreakpoint(JDIDebugModel.java:324)
+	at org.eclipse.jdt.internal.debug.core.refactoring.LineBreakpointTypeChange.perform(LineBreakpointTypeChange.java:60)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-12-01 12:12:49.572
+!MESSAGE Resource '/Writxtr/src/danielalmgrundstrom/writxtr/data/system/FontHandler.java' does not exist.
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2013-12-01 12:12:49.781
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.debug.core.DebugException: Resource '/Writxtr/src/danielalmgrundstrom/writxtr/data/system/FontHandler.java' does not exist.
+	at org.eclipse.debug.core.model.Breakpoint.run(Breakpoint.java:343)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaLineBreakpoint.<init>(JavaLineBreakpoint.java:159)
+	at org.eclipse.jdt.internal.debug.core.breakpoints.JavaLineBreakpoint.<init>(JavaLineBreakpoint.java:132)
+	at org.eclipse.jdt.debug.core.JDIDebugModel.createLineBreakpoint(JDIDebugModel.java:324)
+	at org.eclipse.jdt.internal.debug.core.refactoring.LineBreakpointTypeChange.perform(LineBreakpointTypeChange.java:60)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-12-01 12:12:49.781
+!MESSAGE Resource '/Writxtr/src/danielalmgrundstrom/writxtr/data/system/FontHandler.java' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2013-12-01 12:12:49.783
+!MESSAGE Resource '/Writxtr/src/danielalmgrundstrom/writxtr/data/system/FontHandler.java' does not exist.
+
+!ENTRY net.sourceforge.metrics 1 1 2013-12-01 12:12:55.694
+!MESSAGE metrics for package =Writxtr/src<danielalmgrundstrom.writxtr not found.
+
+!ENTRY org.eclipse.ui 4 4 2013-12-01 14:44:30.317
+!MESSAGE Unable to create part
+
+!ENTRY org.eclipse.core.filebuffers 4 0 2013-12-01 14:44:30.336
+!MESSAGE The file does not exist.
+!STACK 1
+org.eclipse.core.runtime.CoreException: The file does not exist.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:237)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:112)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:559)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:980)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:478)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1244)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4230)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:237)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1480)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2584)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2557)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1395)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3217)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.ui.internal.WorkbenchWindow$13.run(WorkbenchWindow.java:1818)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:1815)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3235)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3262)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:359)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:306)
+	at sun.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:877)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:857)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:119)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:333)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:254)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:102)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:71)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:53)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:949)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:633)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:735)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:700)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:685)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1096)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:66)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4491)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:205)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:80)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$9.widgetSelected(StackRenderer.java:885)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1416)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1401)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1187)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3080)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1772)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:279)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2013-12-01 14:44:30.339
+!MESSAGE The file does not exist.
+
+!ENTRY org.eclipse.ui 4 0 2013-12-01 15:30:33.286
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4397)
+	at org.eclipse.swt.SWT.error(SWT.java:4312)
+	at org.eclipse.swt.SWT.error(SWT.java:4283)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:481)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:418)
+	at org.eclipse.swt.widgets.Control.redraw(Control.java:3663)
+	at org.eclipse.swt.widgets.Link.gtk_event_after(Link.java:375)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2085)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5467)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4569)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8742)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1243)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2288)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3361)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-12-01 15:51:14.495
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.AbstractDocument.getChar(AbstractDocument.java:806)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getChar(SynchronizableDocument.java:152)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getBracketHoverInfo(JavaSourceHover.java:140)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaSourceHover.getHoverInfo(JavaSourceHover.java:101)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractJavaEditorTextHover.getHoverInfo2(AbstractJavaEditorTextHover.java:84)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2013-12-01 17:03:19.197 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-12-01 20:10:09.894
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-01 20:10:09.894
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ba84f6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c6f335c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY net.sourceforge.metrics 4 4 2013-12-01 21:47:54.805
+!MESSAGE Can't initialize AbstractMetricSource for FontChangedListener.java
+!SESSION 2013-12-01 22:24:15.566 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.jface 2 0 2013-12-01 22:43:44.951
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-01 22:43:44.951
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79fde87a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ca9e028,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SESSION 2013-12-03 10:21:45.396 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-12-03 10:24:50.637
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.preferences.GdtPreferences", thread "Thread[Worker-1,5,main]" timed out waiting (5011ms) for thread "Thread[main,6,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "com.google.gdt.eclipse.suite.preferences.GdtPreferences" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 21 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at com.google.appengine.eclipse.wtp.runtime.GaeRuntimeConfigurator.startup(GaeRuntimeConfigurator.java:41)
+	at org.eclipse.wst.server.core.internal.ResourceManager.executeStartups(ResourceManager.java:207)
+	at org.eclipse.wst.server.core.internal.ResourceManager.init(ResourceManager.java:245)
+	at org.eclipse.wst.server.core.internal.ResourceManager.getServers(ResourceManager.java:795)
+	at org.eclipse.wst.server.core.ServerCore.getServers(ServerCore.java:316)
+	at org.eclipse.wst.server.ui.internal.InitializeJob.run(InitializeJob.java:34)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2013-12-03 11:45:37.178 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -data /home/daniel/Java/Experiments -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.osgi 2 0 2013-12-03 11:56:27.422
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut", thread "Thread[main,6,main]" timed out waiting (5102ms) for thread "Thread[Worker-9,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43 [292]". To avoid deadlock, thread "Thread[main,6,main]" is proceeding but "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:../../home/daniel/.eclipse/org.eclipse.platform_4.3.0_1473617060_linux_gtk_x86_64/plugins/com.google.gdt.eclipse.suite_3.4.2.v201310081834-rel-r43.jar" by thread "Worker-9".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchableResource(LaunchShortcutExtension.java:527)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLaunchableResource(LaunchingResourceManager.java:414)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:118)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:82)
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:80)
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:409)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 58 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:478)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:109)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchableResource(LaunchShortcutExtension.java:527)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLaunchableResource(LaunchingResourceManager.java:414)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.selectAndLaunch(ContextRunner.java:118)
+	at org.eclipse.debug.internal.ui.contextlaunching.ContextRunner.launch(ContextRunner.java:82)
+	at org.eclipse.debug.ui.actions.AbstractLaunchToolbarAction.run(AbstractLaunchToolbarAction.java:80)
+	at org.eclipse.debug.ui.actions.AbstractLaunchHistoryAction.runWithEvent(AbstractLaunchHistoryAction.java:409)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:241)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1392)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3742)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3363)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:138)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:610)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1426)
+
+!ENTRY org.eclipse.jface 2 0 2013-12-03 11:56:43.794
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-03 11:56:43.794
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.commands.eof,EOF,
+		Send end of file,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3605c9f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.console,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@360e0f88,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)

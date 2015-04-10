@@ -1,0 +1,38 @@
+1385889301385	Rename method 'fireLoadFileEvent'
+1385889313284	Rename method 'fireLoadURLEvent'
+1385893173532	Rename field 'aboutMenu'
+1385893203616	Rename field 'heplpMenu'
+1385893257728	Rename type 'WTXTRTextArea'
+1385896165148	Rename type 'WTXTREditorPane'
+1385896398800	Rename package 'danielalmgrundstrom.txtedit.data.system'
+1385896410447	Rename package 'danielalmgrundstrom.txtedit.listeners'
+1385896422753	Rename package 'danielalmgrundstrom.txtedit.ui'
+1385896440676	Rename package 'danielalmgrundstrom.txtedit.enums'
+1385896450000	Rename package 'danielalmgrundstrom.txtedit.data.io'
+1385896460495	Rename package 'danielalmgrundstrom.txtedit.data'
+1385896467899	Rename package 'danielalmgrundstrom.txtedit.controller.ui'
+1385896477976	Rename package 'danielalmgrundstrom.txtedit.controller.data'
+1385896487250	Rename package 'danielalmgrundstrom.txtedit.beans'
+1385896495641	Rename package 'danielalmgrundstrom.txtedit.controller'
+1385896507441	Rename package 'danielalmgrundstrom.txtedit'
+1385896622175	Rename type 'WTXTRMenuBar'
+1385896634182	Rename type 'WTXTRTextArea'
+1385896645417	Rename type 'WTXTRToolBar'
+1385906525859	Rename method 'initMenuBar'
+1385908326392	Rename field 'scrollPane'
+1385909063971	Rename field 'okButton'
+1385926832439	Delete element
+1385927357495	Rename field 'panel1'
+1385927373786	Rename field 'panel2'
+1385931619018	Rename field 'filter'
+1385933746348	Copy file
+1385933755853	Copy file
+1385933764147	Copy file
+1385933773088	Copy file
+1385933780326	Delete element
+1385934057544	Copy files
+1385934064549	Delete element
+1385934572547	Copy files
+1385934580444	Delete element
+1385987301856	Rename field 'iOControl'
+1385987310752	Rename field 'windowControl'
