@@ -10,12 +10,9 @@ public class FontHandler implements FontRequestListener {
 
 	private FontsRecievedListener fontsRecievedListener;
 
-	private String[] fontNames;
-	
 	@Override
 	public void onFontRequest() {
-		fontNames = getFontNames();
-		fireFontsRecievedEvent(new FontsRecievedEvent(fontNames));
+		fireFontsRecievedEvent(new FontsRecievedEvent(getFontNames()));
 	}
 	
 	private String[] getFontNames(){

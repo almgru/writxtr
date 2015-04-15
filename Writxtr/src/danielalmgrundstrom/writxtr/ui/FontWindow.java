@@ -145,8 +145,8 @@ public class FontWindow extends JFrame implements ActionListener {
 	public void fireFontChangedEvent() {
 		if(fontChangedListener != null){
 			FontChangedEvent fontChangedEvent = new FontChangedEvent(
-				(String) fontList.getSelectedValue(),
-				(Integer) sizeList.getSelectedValue(), 
+				fontList.getSelectedValue(),
+				sizeList.getSelectedValue(),
 				italicButton.isSelected(),
 				boldButton.isSelected());
 

@@ -4,5 +4,5 @@ import danielalmgrundstrom.writxtr.beans.IOErrorEvent;
 
 
 public interface IOErrorListener {
-	public void onIOError(IOErrorEvent event);
+	void onIOError(IOErrorEvent event);
 }

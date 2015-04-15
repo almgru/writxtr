@@ -101,7 +101,6 @@ public class MenuController implements MenuListener{
 	}
 	
 	private void onAbout(){
-		window.showMessage(String.format
-				("Writxtr\n\nMade by Daniel Alm Grundström"));
+		window.showMessage("Writxtr\n\nMade by Daniel Alm Grundström");
 	}
 }

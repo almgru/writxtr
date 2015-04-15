@@ -4,5 +4,5 @@ import danielalmgrundstrom.writxtr.beans.ToolBarEvent;
 
 
 public interface ToolBarListener {
-	public void onButtonClicked(ToolBarEvent event);
+	void onButtonClicked(ToolBarEvent event);
 }

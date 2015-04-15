@@ -4,5 +4,5 @@ import danielalmgrundstrom.writxtr.beans.FontsRecievedEvent;
 
 
 public interface FontsRecievedListener {
-	public void onFontsRecieved(FontsRecievedEvent event);
+	void onFontsRecieved(FontsRecievedEvent event);
 }

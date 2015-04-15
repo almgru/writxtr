@@ -97,12 +97,11 @@ public class IOController implements SaveClickedListener,
 
 			if (input != null) {
 				url = new URL(input);
-				// fileHandler.requestLoad(url);
 				fireLoadURLRequest(url);
 			}
 
 		} catch (MalformedURLException e) {
-
+			JOptionPane.showMessageDialog(null, "Invalid url. Please enter full path including \"http(s)://.\"");
 		}
 	}
 

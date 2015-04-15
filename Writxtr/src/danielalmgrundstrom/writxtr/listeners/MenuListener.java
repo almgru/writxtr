@@ -4,5 +4,5 @@ import danielalmgrundstrom.writxtr.beans.MenuEvent;
 
 
 public interface MenuListener {
-	public void onMenuButtonClicked(MenuEvent event);
+	void onMenuButtonClicked(MenuEvent event);
 }

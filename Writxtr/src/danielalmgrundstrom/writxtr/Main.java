@@ -14,22 +14,13 @@ public class Main {
 
 			@Override
 			public void run() {
-				setLAF();
+				setLookAndFeel();
 				start();
 			}
 		});
 	}
 
-	private static void start() {
-		DataHandler dataHandler = new DataHandler();
-		Window window = new Window();
-		Controller control = new Controller(dataHandler, window);
-
-		window.init();
-		control.init();
-	}
-
-	private static void setLAF() {
+	private static void setLookAndFeel() {
 		try {
 			UIManager.setLookAndFeel(
 					UIManager.getSystemLookAndFeelClassName());
@@ -47,5 +38,14 @@ public class Main {
 				System.exit(1);
 			}
 		}
+	}
+
+	private static void start() {
+		DataHandler dataHandler = new DataHandler();
+		Window window = new Window();
+		Controller control = new Controller(dataHandler, window);
+
+		window.init();
+		control.init();
 	}
 }
