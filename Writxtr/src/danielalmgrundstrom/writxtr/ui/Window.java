@@ -56,30 +56,12 @@ public class Window extends JFrame {
 
 		add(toolBar, BorderLayout.NORTH);
 		add(scrollPane, BorderLayout.CENTER);
-
 		setJMenuBar(menuBar);
 		
 		setMinimumSize(new Dimension(240, 120));
-		
 		setSize(800, 600);
-		
-		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		setLocation(dim.width/2-getSize().width/2, dim.height/2-getSize().height/2);
-		
-		setDefaultCloseOperation(Window.DO_NOTHING_ON_CLOSE);
-		
-		addWindowListener(new WindowAdapter(){
-			
-			@Override
-			public void windowOpened(WindowEvent event) {
-				textArea.requestFocus();
-			}
-			
-			@Override
-			public void windowClosing(WindowEvent event){
-				menuBar.fireMenuEvent(new MenuEvent(MenuItem.Quit));
-			}
-		});
+		centerWindow();
+		initWindowEvents();
 		
 		setVisible(true);
 	}
@@ -111,5 +93,26 @@ public class Window extends JFrame {
 	
 	public void changeTitle(String fileName){
 		setTitle(String.format("Writxtr - %s", fileName));
+	}
+	
+	private void centerWindow() {
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		setLocation(dim.width/2-getSize().width/2, dim.height/2-getSize().height/2);
+	}
+	
+	private void initWindowEvents() {
+		setDefaultCloseOperation(Window.DO_NOTHING_ON_CLOSE);
+		
+		addWindowListener(new WindowAdapter(){	
+			@Override
+			public void windowOpened(WindowEvent event) {
+				textArea.requestFocus();
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent event){
+				menuBar.fireMenuEvent(new MenuEvent(MenuItem.Quit));
+			}
+		});
 	}
 }
