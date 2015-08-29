@@ -22,60 +22,47 @@ public class WritxtrToolBar extends JToolBar implements ActionListener {
 	private ToolBarListener toolBarListener;
 	
 	private JButton newButton;
+    private JButton openButton;
 	private JButton saveButton;
 	private JButton saveAsButton;
-	private JButton openButton;
 	
 	public WritxtrToolBar(){
 	}
 	
 	public void init(){
 		newButton = new JButton(new ImageIcon(getClass().getResource("new16.png")));
-		newButton.setPreferredSize(new Dimension(24,24));
+		newButton.setPreferredSize(new Dimension(24, 24));
 		newButton.setBorderPainted(false);
 		newButton.setOpaque(false);
 		newButton.setToolTipText("New file");
+
+        openButton = new JButton(new ImageIcon(getClass().getResource("open16.png")));
+        openButton.setPreferredSize(new Dimension(24, 24));
+        openButton.setBorderPainted(false);
+        openButton.setOpaque(false);
+        openButton.setToolTipText("Open");
 		
 		saveButton = new JButton(new ImageIcon(getClass().getResource("save16.png")));
-		saveButton.setPreferredSize(new Dimension(24,24));
+		saveButton.setPreferredSize(new Dimension(24, 24));
 		saveButton.setBorderPainted(false);
 		saveButton.setOpaque(false);
 		saveButton.setToolTipText("Save");
 		
 		saveAsButton = new JButton(new ImageIcon(getClass().getResource("saveAs16.png")));
-		saveAsButton.setPreferredSize(new Dimension(24,24));
+		saveAsButton.setPreferredSize(new Dimension(24, 24));
 		saveAsButton.setBorderPainted(false);
 		saveAsButton.setOpaque(false);
 		saveAsButton.setToolTipText("Save as");
-		
-		openButton = new JButton(new ImageIcon(getClass().getResource("open16.png")));
-		openButton.setPreferredSize(new Dimension(24,24));
-		openButton.setBorderPainted(false);
-		openButton.setOpaque(false);
-		openButton.setToolTipText("Open");
 		
 		newButton.addActionListener(this);
 		saveButton.addActionListener(this);
 		saveAsButton.addActionListener(this);
 		openButton.addActionListener(this);
-		
-		//underlineButton = new JToggleButton("U");
-		//underlineButton.setPreferredSize(new Dimension(24,24));
-		//underlineButton.setBorderPainted(false);
-		//underlineButton.setOpaque(false);
-		//underlineButton.setToolTipText("Underline");
-		
-		//underlineButton.addActionListener(this);
 				
 		add(newButton);
+        add(openButton);
 		add(saveButton);
 		add(saveAsButton);
-		add(openButton);
-		//add(fontField);
-		//add(fontSizeField);
-		//add(italicButton);
-		//add(boldButton);
-		//add(underlineButton);
 		
 		setFloatable(false);
 	}

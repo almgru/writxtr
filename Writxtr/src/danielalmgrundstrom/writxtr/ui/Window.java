@@ -42,7 +42,7 @@ public class Window extends JFrame {
 	}
 
 	public void init() {
-		changeTitle("new textfile");
+		changeTitle("new text file");
 		
 		menuBar = new WritxtrMenuBar();
 		menuBar.init();

@@ -25,8 +25,7 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 	private JMenuItem newItem;
 	private JMenuItem saveItem;
 	private JMenuItem saveAsItem;
-	private JMenuItem openFileItem;
-	private JMenuItem openURLItem;
+	private JMenuItem openItem;
 	private JMenuItem printItem;
 	private JMenuItem quitItem;
 
@@ -51,8 +50,7 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 
 	public void init() {
 		newItem = new JMenuItem("New");
-		openFileItem = new JMenuItem("Open file");
-		openURLItem = new JMenuItem("Open URL");
+		openItem = new JMenuItem("Open");
 		saveItem = new JMenuItem("Save");
 		saveAsItem = new JMenuItem("Save as...");
 		printItem = new JMenuItem("Print");
@@ -61,17 +59,15 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 		newItem.addActionListener(this);
 		saveItem.addActionListener(this);
 		saveAsItem.addActionListener(this);
-		openFileItem.addActionListener(this);
-		openURLItem.addActionListener(this);
+		openItem.addActionListener(this);
 		printItem.addActionListener(this);
 		quitItem.addActionListener(this);
 
 		fileMenu = new JMenu("File");
 		fileMenu.add(newItem);
+        fileMenu.add(openItem);
 		fileMenu.add(saveItem);
 		fileMenu.add(saveAsItem);
-		fileMenu.add(openFileItem);
-		fileMenu.add(openURLItem);
 		fileMenu.add(new JSeparator());
 		fileMenu.add(printItem);
 		fileMenu.add(new JSeparator());
@@ -153,11 +149,8 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 			else if (event.getSource() == saveAsItem)
 				fireMenuEvent(new MenuEvent(MenuItem.SaveAs));
 
-			else if (event.getSource() == openFileItem)
+			else if (event.getSource() == openItem)
 				fireMenuEvent(new MenuEvent(MenuItem.OpenFile));
-
-			else if (event.getSource() == openURLItem)
-				fireMenuEvent(new MenuEvent(MenuItem.OpenURL));
 			
 			else if (event.getSource() == printItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Print));

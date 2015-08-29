@@ -10,7 +10,6 @@ import danielalmgrundstrom.writxtr.listeners.SaveCompleteListener;
 
 public class IOHandler {
 	private FileHandler fileHandler;
-	private URLHandler uRLHandler;
 
 	private SaveCompleteListener saveCompleteListener;
 	private LoadCompleteListener loadCompleteListener;
@@ -18,15 +17,10 @@ public class IOHandler {
 
 	public IOHandler() {
 		fileHandler = new FileHandler(this);
-		uRLHandler = new URLHandler(this);
 	}
 
 	public FileHandler getFileHandler() {
 		return fileHandler;
-	}
-	
-	public URLHandler getURLHandler(){
-		return uRLHandler;
 	}
 
 	public void setSaveCompleteListener(
@@ -51,11 +45,6 @@ public class IOHandler {
 	public void fireLoadCompleteEvent(LoadFileEvent event) {
 		if (loadCompleteListener != null)
 			loadCompleteListener.onLoadFileComplete(event);
-	}
-
-	public void fireLoadCompleteEvent(LoadURLEvent event) {
-		if (loadCompleteListener != null)
-			loadCompleteListener.onLoadURLComplete(event);
 	}
 
 	public void fireIOErrorEvent(IOErrorEvent event) {

@@ -104,11 +104,6 @@ public class WindowController implements SaveCompleteListener,
 			loadRequestListener.onLoadFileClicked();
 	}
 
-	public void fireLoadURLRequest() {
-		if (loadRequestListener != null)
-			loadRequestListener.onLoadURLClicked();
-	}
-
 	public void fireFontRequest() {
 		if (fontRequestListener != null)
 			fontRequestListener.onFontRequest();
@@ -229,11 +224,6 @@ public class WindowController implements SaveCompleteListener,
 		if (Controller.openFileOnSaveCompleted) {
 			fireLoadFileRequest();
 			Controller.openFileOnSaveCompleted = false;
-		}
-
-		if (Controller.openURLOnSaveCompleted) {
-			fireLoadURLRequest();
-			Controller.openURLOnSaveCompleted = false;
 		}
 
 		window.getWindowTextArea().setTextChanged(false);

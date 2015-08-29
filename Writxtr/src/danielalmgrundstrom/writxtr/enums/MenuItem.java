@@ -5,7 +5,6 @@ public enum MenuItem {
 	Save,
 	SaveAs,
 	OpenFile,
-	OpenURL,
 	Print,
 	Quit,
 	Delete,

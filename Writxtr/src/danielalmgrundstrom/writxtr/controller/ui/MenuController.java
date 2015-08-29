@@ -36,10 +36,6 @@ public class MenuController implements MenuListener{
 			windowController.onOpenFile();
 			break;
 			
-		case OpenURL:
-			onOpenURL();
-			break;
-			
 		case Print:
 			windowController.onPrint();
 			break;
@@ -67,25 +63,6 @@ public class MenuController implements MenuListener{
 		default:
 			break;
 		}
-	}
-	
-	private void onOpenURL(){
-		if(window.getWindowTextArea().getTextChanged()){
-			int returnValue = JOptionPane.showConfirmDialog
-					(null, WindowController.OPEN_CONFIRM_MESSAGE);
-			
-			if(returnValue == 0){
-				Controller.openFileOnSaveCompleted = true;
-				windowController.onSave();
-			}
-			
-			else if (returnValue == 1){
-				windowController.fireLoadURLRequest();
-			}
-		}
-		
-		else
-			windowController.fireLoadURLRequest();
 	}
 	
 	private void onDelete(){

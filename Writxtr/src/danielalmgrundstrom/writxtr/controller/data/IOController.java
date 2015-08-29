@@ -1,11 +1,8 @@
 package danielalmgrundstrom.writxtr.controller.data;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import danielalmgrundstrom.writxtr.beans.FontsRecievedEvent;
@@ -15,7 +12,6 @@ import danielalmgrundstrom.writxtr.listeners.FontsRecievedListener;
 import danielalmgrundstrom.writxtr.listeners.IOErrorListener;
 import danielalmgrundstrom.writxtr.listeners.LoadClickedListener;
 import danielalmgrundstrom.writxtr.listeners.LoadFileListener;
-import danielalmgrundstrom.writxtr.listeners.LoadURLListener;
 import danielalmgrundstrom.writxtr.listeners.NewClickedListener;
 import danielalmgrundstrom.writxtr.listeners.SaveClickedListener;
 import danielalmgrundstrom.writxtr.listeners.SaveListener;
@@ -23,14 +19,13 @@ import danielalmgrundstrom.writxtr.ui.FontWindow;
 import danielalmgrundstrom.writxtr.ui.Window;
 
 public class IOController implements SaveClickedListener,
-										LoadClickedListener,
-										NewClickedListener,
-										IOErrorListener,
-										FontsRecievedListener {
+                                     LoadClickedListener,
+                                     NewClickedListener,
+                                     IOErrorListener,
+                                     FontsRecievedListener {
 
 	private SaveListener saveListener;
 	private LoadFileListener loadFileListener;
-	private LoadURLListener loadURLListener;
 
 	private JFileChooser fileChooser;
 	private FileNameExtensionFilter txtFilter;
@@ -88,33 +83,12 @@ public class IOController implements SaveClickedListener,
 
 	}
 
-	@Override
-	public void onLoadURLClicked() {
-		try {
-			String input = JOptionPane.showInputDialog("Enter url to open: ");
-
-			URL url = null;
-
-			if (input != null) {
-				url = new URL(input);
-				fireLoadURLRequest(url);
-			}
-
-		} catch (MalformedURLException e) {
-			JOptionPane.showMessageDialog(null, "Invalid url. Please enter full path including \"http(s)://.\"");
-		}
-	}
-
 	public void setSaveListener(SaveListener saveListener) {
 		this.saveListener = saveListener;
 	}
 
 	public void setLoadFileListener(LoadFileListener loadFileListener) {
 		this.loadFileListener = loadFileListener;
-	}
-
-	public void setLoadURLListener(LoadURLListener loadURLListener) {
-		this.loadURLListener = loadURLListener;
 	}
 
 	public void fireSaveEvent(File file, SaveEvent event) {
@@ -125,11 +99,6 @@ public class IOController implements SaveClickedListener,
 	public void fireLoadFileRequest(File file) {
 		if (loadFileListener != null)
 			loadFileListener.onLoadFileRequest(file);
-	}
-
-	public void fireLoadURLRequest(URL url) {
-		if (loadURLListener != null)
-			loadURLListener.onLoadURLRequest(url);
 	}
 
 	@Override

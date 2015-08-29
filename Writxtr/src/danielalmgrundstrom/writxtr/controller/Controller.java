@@ -31,7 +31,6 @@ public class Controller{
 		windowController.init();
 		iOController.setSaveListener(dataHandler.getIOHandler().getFileHandler());
 		iOController.setLoadFileListener(dataHandler.getIOHandler().getFileHandler());
-		iOController.setLoadURLListener(dataHandler.getIOHandler().getURLHandler());
 
 		dataHandler.getIOHandler().setLoadCompleteListener(windowController);
 		dataHandler.getIOHandler().setSaveCompleteListener(windowController);
