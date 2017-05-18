@@ -1,16 +1,16 @@
 package danielalmgrundstrom.writxtr.beans;
 
-import danielalmgrundstrom.writxtr.enums.MenuItem;
+import danielalmgrundstrom.writxtr.enums.MenuAction;
 
 
 public class MenuEvent {
-	private MenuItem item;
+	private MenuAction item;
 	
-	public MenuEvent(MenuItem item){
+	public MenuEvent(MenuAction item){
 		this.item = item;
 	}
 	
-	public MenuItem getItem(){
+	public MenuAction getItem(){
 		return item;
 	}
 }

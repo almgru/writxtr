@@ -2,14 +2,14 @@ package danielalmgrundstrom.writxtr.controller.ui;
 
 import danielalmgrundstrom.writxtr.beans.ToolBarEvent;
 import danielalmgrundstrom.writxtr.listeners.ToolBarListener;
-import danielalmgrundstrom.writxtr.ui.Window;
+import danielalmgrundstrom.writxtr.ui.MainView;
 
 public class ToolBarController implements ToolBarListener{
 
-	Window window;
+	MainView window;
 	WindowController windowController;
 	
-	public ToolBarController(Window window, WindowController windowController) {
+	public ToolBarController(MainView window, WindowController windowController) {
 		this.window = window;
 		this.windowController = windowController;
 	}

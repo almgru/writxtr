@@ -1,6 +1,7 @@
 package danielalmgrundstrom.writxtr.enums;
 
-public enum MenuItem {
+public enum MenuAction
+{
 	New,
 	Save,
 	SaveAs,

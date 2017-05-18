@@ -3,12 +3,12 @@ package danielalmgrundstrom.writxtr.controller;
 import danielalmgrundstrom.writxtr.controller.data.IOController;
 import danielalmgrundstrom.writxtr.controller.ui.WindowController;
 import danielalmgrundstrom.writxtr.data.DataHandler;
-import danielalmgrundstrom.writxtr.ui.Window;
+import danielalmgrundstrom.writxtr.ui.MainView;
 
 public class Controller{
 	
 	private DataHandler dataHandler;
-	private Window window;
+	private MainView window;
 	
 	private IOController iOController;
 	private WindowController windowController;
@@ -18,7 +18,7 @@ public class Controller{
 	public static boolean openFileOnSaveCompleted = false;
 	public static boolean openURLOnSaveCompleted = false;
 	
-	public Controller(DataHandler dataHandler, Window window){	
+	public Controller(DataHandler dataHandler, MainView window){
 		this.dataHandler = dataHandler;
 		this.window = window;
 		

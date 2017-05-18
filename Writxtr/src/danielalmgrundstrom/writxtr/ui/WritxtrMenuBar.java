@@ -1,180 +1,187 @@
 package danielalmgrundstrom.writxtr.ui;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JSeparator;
-import javax.swing.text.DefaultEditorKit;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.*;
 
 import danielalmgrundstrom.writxtr.beans.MenuEvent;
-import danielalmgrundstrom.writxtr.enums.MenuItem;
+import danielalmgrundstrom.writxtr.enums.MenuAction;
 import danielalmgrundstrom.writxtr.listeners.MenuListener;
 
-public class WritxtrMenuBar extends JMenuBar implements ActionListener {
+public class WritxtrMenuBar extends MenuBar implements EventHandler<ActionEvent>
+{
 
-	private static final long serialVersionUID = -839100811136182450L;
+    private static final long serialVersionUID = -839100811136182450L;
 
-	// Listeners
-	private MenuListener menuListener;
+    // Listeners
+    private MenuListener menuListener;
 
-	// File Menu
-	private JMenu fileMenu;
-	private JMenuItem newItem;
-	private JMenuItem saveItem;
-	private JMenuItem saveAsItem;
-	private JMenuItem openItem;
-	private JMenuItem printItem;
-	private JMenuItem quitItem;
+    // File Menu
+    private Menu fileMenu;
+    private MenuItem newItem;
+    private MenuItem saveItem;
+    private MenuItem saveAsItem;
+    private MenuItem openItem;
+    private MenuItem printItem;
+    private MenuItem quitItem;
 
-	// Edit Menu
-	private JMenu editMenu;
-	private JMenuItem copyItem;
-	private JMenuItem cutItem;
-	private JMenuItem pasteItem;
-	private JMenuItem deleteItem;
-	private JMenuItem selectAllItem;
+    // Edit Menu
+    private Menu editMenu;
+    private MenuItem copyItem;
+    private MenuItem cutItem;
+    private MenuItem pasteItem;
+    private MenuItem deleteItem;
+    private MenuItem selectAllItem;
 
-	// View Menu
-	private JMenu viewMenu;
-	private JMenuItem fontItem;
+    // View Menu
+    private Menu viewMenu;
+    private MenuItem fontItem;
 
-	// Help Menu
-	private JMenu helpMenu;
-	private JMenuItem aboutItem;
+    // Help Menu
+    private Menu helpMenu;
+    private MenuItem aboutItem;
 
-	public WritxtrMenuBar() {
-	}
+    public WritxtrMenuBar()
+    {
+    }
 
-	public void init() {
-		newItem = new JMenuItem("New");
-		openItem = new JMenuItem("Open");
-		saveItem = new JMenuItem("Save");
-		saveAsItem = new JMenuItem("Save as...");
-		printItem = new JMenuItem("Print");
-		quitItem = new JMenuItem("Exit");
+    public void init()
+    {
+        newItem = new MenuItem("New");
+        openItem = new MenuItem("Open");
+        saveItem = new MenuItem("Save");
+        saveAsItem = new MenuItem("Save as...");
+        printItem = new MenuItem("Print");
+        quitItem = new MenuItem("Exit");
 
-		newItem.addActionListener(this);
-		saveItem.addActionListener(this);
-		saveAsItem.addActionListener(this);
-		openItem.addActionListener(this);
-		printItem.addActionListener(this);
-		quitItem.addActionListener(this);
+        newItem.addEventHandler(ActionEvent.ACTION, this);
+        newItem.addEventHandler(ActionEvent.ACTION, this);
+        saveItem.addEventHandler(ActionEvent.ACTION, this);
+        saveAsItem.addEventHandler(ActionEvent.ACTION, this);
+        openItem.addEventHandler(ActionEvent.ACTION, this);
+        printItem.addEventHandler(ActionEvent.ACTION, this);
+        quitItem.addEventHandler(ActionEvent.ACTION, this);
 
-		fileMenu = new JMenu("File");
-		fileMenu.add(newItem);
-        fileMenu.add(openItem);
-		fileMenu.add(saveItem);
-		fileMenu.add(saveAsItem);
-		fileMenu.add(new JSeparator());
-		fileMenu.add(printItem);
-		fileMenu.add(new JSeparator());
-		fileMenu.add(quitItem);
+        fileMenu = new Menu("File");
+        fileMenu.getItems().add(newItem);
+        fileMenu.getItems().add(openItem);
+        fileMenu.getItems().add(saveItem);
+        fileMenu.getItems().add(saveAsItem);
+        fileMenu.getItems().add(new SeparatorMenuItem());
+        fileMenu.getItems().add(printItem);
+        fileMenu.getItems().add(new SeparatorMenuItem());
+        fileMenu.getItems().add(quitItem);
 
-		copyItem = new JMenuItem(new DefaultEditorKit.CopyAction());
-		cutItem = new JMenuItem(new DefaultEditorKit.CutAction());
-		pasteItem = new JMenuItem(new DefaultEditorKit.PasteAction());
-		deleteItem = new JMenuItem("Delete");
-		selectAllItem = new JMenuItem("Select all");
+        copyItem = new MenuItem("Copy");
+        cutItem = new MenuItem("Cut");
+        pasteItem = new MenuItem("Paste");
+        deleteItem = new MenuItem("Delete");
+        selectAllItem = new MenuItem("Select all");
 
-		copyItem.setEnabled(false);
-		cutItem.setEnabled(false);
-		deleteItem.setEnabled(false);
+        copyItem.addEventHandler(ActionEvent.ACTION, this);
+        cutItem.addEventHandler(ActionEvent.ACTION, this);
+        pasteItem.addEventHandler(ActionEvent.ACTION, this);
+        deleteItem.addEventHandler(ActionEvent.ACTION, this);
+        selectAllItem.addEventHandler(ActionEvent.ACTION, this);
 
-		copyItem.setText("Copy");
-		cutItem.setText("Cut");
-		pasteItem.setText("Paste");
+        editMenu = new Menu("Edit");
+        editMenu.getItems().add(copyItem);
+        editMenu.getItems().add(cutItem);
+        editMenu.getItems().add(pasteItem);
+        editMenu.getItems().add(deleteItem);
+        editMenu.getItems().add(new SeparatorMenuItem());
+        editMenu.getItems().add(selectAllItem);
 
-		copyItem.addActionListener(this);
-		cutItem.addActionListener(this);
-		pasteItem.addActionListener(this);
-		deleteItem.addActionListener(this);
-		selectAllItem.addActionListener(this);
+        aboutItem = new MenuItem("About");
+        aboutItem.addEventHandler(ActionEvent.ACTION, this);
 
-		editMenu = new JMenu("Edit");
-		editMenu.add(copyItem);
-		editMenu.add(cutItem);
-		editMenu.add(pasteItem);
-		editMenu.add(deleteItem);
-		editMenu.add(new JSeparator());
-		editMenu.add(selectAllItem);
+        fontItem = new MenuItem("Change font");
+        fontItem.addEventHandler(ActionEvent.ACTION, this);
 
-		aboutItem = new JMenuItem("About");
-		aboutItem.addActionListener(this);
+        viewMenu = new Menu("View");
+        viewMenu.getItems().add(fontItem);
 
-		fontItem = new JMenuItem("Change font");
-		fontItem.addActionListener(this);
-		
-		viewMenu = new JMenu("View");
-		viewMenu.add(fontItem);
-		
-		helpMenu = new JMenu("Help");
-		helpMenu.add(aboutItem);
+        helpMenu = new Menu("Help");
+        helpMenu.getItems().add(aboutItem);
 
-		add(fileMenu);
-		add(editMenu);
-		add(viewMenu);
-		add(helpMenu);
-	}
+        getMenus().add(fileMenu);
+        getMenus().add(editMenu);
+        getMenus().add(viewMenu);
+        getMenus().add(helpMenu);
+    }
 
-	public void setMenuListener(MenuListener menuListener) {
-		this.menuListener = menuListener;
-	}
+    public void setMenuListener(MenuListener menuListener)
+    {
+        this.menuListener = menuListener;
+    }
 
-	public void fireMenuEvent(MenuEvent event) {
-		if (menuListener != null)
-			menuListener.onMenuButtonClicked(event);
-	}
+    public void fireMenuEvent(MenuEvent event)
+    {
+        if (menuListener != null)
+        {
+            menuListener.onMenuButtonClicked(event);
+        }
+    }
 
-	public void setCCPEnabled(boolean b) {
-		copyItem.setEnabled(b);
-		cutItem.setEnabled(b);
-		deleteItem.setEnabled(b);
-	}
+    @Override
+    public void handle(ActionEvent event)
+    {
+        if (event.getSource() instanceof MenuItem)
+        {
+            MenuEvent eventToFire = null;
 
-	@Override
-	public void actionPerformed(ActionEvent event) {
+            // File Menu
+            if (event.getSource() == newItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.New);
+            }
+            else if (event.getSource() == saveItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.Save);
+            }
+            else if (event.getSource() == saveAsItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.SaveAs);
+            }
+            else if (event.getSource() == openItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.OpenFile);
+            }
+            else if (event.getSource() == printItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.Print);
+            }
+            else if (event.getSource() == quitItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.Quit);
+            }
 
-		if (event.getSource() instanceof JMenuItem) {
+            // Edit Menu
+            else if (event.getSource() == deleteItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.Delete);
+            }
+            else if (event.getSource() == selectAllItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.SelectAll);
+            }
 
-			// File Menu
-			if (event.getSource() == newItem)
-				fireMenuEvent(new MenuEvent(MenuItem.New));
+            // View Menu
+            else if (event.getSource() == fontItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.Font);
+            }
 
-			else if (event.getSource() == saveItem)
-				fireMenuEvent(new MenuEvent(MenuItem.Save));
+            // About Menu
+            else if (event.getSource() == aboutItem)
+            {
+                eventToFire = new MenuEvent(MenuAction.About);
+            }
 
-			else if (event.getSource() == saveAsItem)
-				fireMenuEvent(new MenuEvent(MenuItem.SaveAs));
-
-			else if (event.getSource() == openItem)
-				fireMenuEvent(new MenuEvent(MenuItem.OpenFile));
-			
-			else if (event.getSource() == printItem) {
-				fireMenuEvent(new MenuEvent(MenuItem.Print));
-			}
-
-			else if (event.getSource() == quitItem)
-				fireMenuEvent(new MenuEvent(MenuItem.Quit));
-
-			// Edit Menu
-			else if (event.getSource() == deleteItem)
-				fireMenuEvent(new MenuEvent(MenuItem.Delete));
-
-			else if (event.getSource() == selectAllItem)
-				fireMenuEvent(new MenuEvent(MenuItem.SelectAll));
-
-			// View Menu
-			else if (event.getSource() == fontItem){
-				fireMenuEvent(new MenuEvent(MenuItem.Font));
-			}
-			
-			// About Menu
-			else if (event.getSource() == aboutItem)
-				fireMenuEvent(new MenuEvent(MenuItem.About));
-			
-		}
-	}
+            if (eventToFire != null)
+            {
+                fireMenuEvent(eventToFire);
+            }
+        }
+    }
 }

@@ -1,51 +1,41 @@
 package danielalmgrundstrom.writxtr;
 
-import java.awt.EventQueue;
-
-import javax.swing.UIManager;
-
 import danielalmgrundstrom.writxtr.controller.Controller;
 import danielalmgrundstrom.writxtr.data.DataHandler;
-import danielalmgrundstrom.writxtr.ui.Window;
+import danielalmgrundstrom.writxtr.ui.MainView;
 
-public class Main {
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
+import javafx.application.Application;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
-			@Override
-			public void run() {
-				setLookAndFeel();
-				start();
-			}
-		});
+/**
+ * Main class which launches the application and creates the components (DataHandler, MainView & Controller)
+ */
+public class Main extends Application
+{
+	public static void main(String[] args)
+    {
+		Application.launch(args);
 	}
 
-	private static void setLookAndFeel() {
-		try {
-			UIManager.setLookAndFeel(
-					UIManager.getSystemLookAndFeelClassName());
-					
-		} catch (Exception e1) {
-			System.out.println("Error loading system look and feel.\nAtempting to load cross plattform look and feel...");
-			try {
-				UIManager.setLookAndFeel(
-						UIManager.getCrossPlatformLookAndFeelClassName());
-				System.out.println("Success!");
-				
-			} catch (Exception e2) {
+    @Override
+    public void start(Stage primaryStage) throws Exception
+    {
+        DataHandler dataHandler = new DataHandler();
+        MainView window = new MainView();
+        Controller control = new Controller(dataHandler, window);
 
-				System.out.println("Error loading cross platform look and feel. Exiting program...");
-				System.exit(1);
-			}
-		}
-	}
+        window.init();
+        control.init();
 
-	private static void start() {
-		DataHandler dataHandler = new DataHandler();
-		Window window = new Window();
-		Controller control = new Controller(dataHandler, window);
+        Scene scene = new Scene(window, 800, 600);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
-		window.init();
-		control.init();
-	}
+        primaryStage.setOnShown(window::onShown);
+        primaryStage.setOnCloseRequest(window::onClose);
+
+    }
 }

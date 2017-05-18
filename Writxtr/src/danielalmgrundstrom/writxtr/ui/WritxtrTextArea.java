@@ -1,32 +1,21 @@
 package danielalmgrundstrom.writxtr.ui;
 
-import java.awt.Font;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Border;
+import javafx.scene.text.Font;
 
-import javax.swing.BorderFactory;
-import javax.swing.JTextArea;
-import javax.swing.event.CaretListener;
-import javax.swing.event.DocumentListener;
-
-public class WritxtrTextArea extends JTextArea {
-
+public class WritxtrTextArea extends TextArea
+{
 	private static final long serialVersionUID = 3556985998540653598L;
 
 	private boolean textChanged;
 	
 	public WritxtrTextArea(){
-		setBorder(BorderFactory.createEmptyBorder());
+		setBorder(Border.EMPTY);
 	}
 	
 	public void init(){
-		setFont(new Font("Arial", Font.PLAIN, 12));
-	}
-	
-	public void setCaretListener(CaretListener caretListener){
-		addCaretListener(caretListener);
-	}
-	
-	public void setDocumenetListener(DocumentListener documentListener){
-		getDocument().addDocumentListener(documentListener);
+        setFont(new Font("Arial", 12));
 	}
 	
 	public void setTextChanged(boolean b){

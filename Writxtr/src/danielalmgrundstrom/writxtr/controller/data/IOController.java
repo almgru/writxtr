@@ -2,8 +2,7 @@ package danielalmgrundstrom.writxtr.controller.data;
 
 import java.io.File;
 
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
+import javafx.stage.FileChooser;
 
 import danielalmgrundstrom.writxtr.beans.FontsRecievedEvent;
 import danielalmgrundstrom.writxtr.beans.IOErrorEvent;
@@ -16,103 +15,116 @@ import danielalmgrundstrom.writxtr.listeners.NewClickedListener;
 import danielalmgrundstrom.writxtr.listeners.SaveClickedListener;
 import danielalmgrundstrom.writxtr.listeners.SaveListener;
 import danielalmgrundstrom.writxtr.ui.FontWindow;
-import danielalmgrundstrom.writxtr.ui.Window;
+import danielalmgrundstrom.writxtr.ui.MainView;
 
 public class IOController implements SaveClickedListener,
                                      LoadClickedListener,
                                      NewClickedListener,
                                      IOErrorListener,
-                                     FontsRecievedListener {
+                                     FontsRecievedListener
+{
 
-	private SaveListener saveListener;
-	private LoadFileListener loadFileListener;
+    private SaveListener saveListener;
+    private LoadFileListener loadFileListener;
 
-	private JFileChooser fileChooser;
-	private FileNameExtensionFilter txtFilter;
-	private File currentFile;
+    private FileChooser fileChooser;
+    private FileChooser.ExtensionFilter txtFilter;
+    private File currentFile;
 
-	private Window window;
+    private MainView window;
 
-	public IOController(Window window) {
-		this.window = window;
-		fileChooser = new JFileChooser();
+    public IOController(MainView window)
+    {
+        this.window = window;
+        fileChooser = new FileChooser();
 
-		txtFilter = new FileNameExtensionFilter("Text files ( .txt .text )",
-				"txt", "text");
-		fileChooser.setFileFilter(txtFilter);
-	}
+        txtFilter = new FileChooser.ExtensionFilter("Text files ( .txt .text )",
+                                                    "txt", "text");
+        fileChooser.getExtensionFilters().add(txtFilter);
+    }
 
-	@Override
-	public void onSaveClicked(SaveEvent event) {
-		if (currentFile != null)
-			fireSaveEvent(currentFile, event);
-		else
-			onSaveAsClicked(event);
-	}
+    @Override
+    public void onSaveClicked(SaveEvent event)
+    {
+        if (currentFile != null)
+        { fireSaveEvent(currentFile, event); }
+        else
+        { onSaveAsClicked(event); }
+    }
 
-	@Override
-	public void onSaveAsClicked(SaveEvent event) {
-		int returnValue = fileChooser.showSaveDialog(window);
+    @Override
+    public void onSaveAsClicked(SaveEvent event)
+    {
+        File file = fileChooser.showSaveDialog(window.getScene().getWindow());
 
-		if (returnValue == JFileChooser.APPROVE_OPTION) {
-			File file = fileChooser.getSelectedFile();
+        if (file != null)
+        {
+            if (fileChooser.getSelectedExtensionFilter() == txtFilter)
+            {
+                if (!file.getName().toLowerCase().endsWith(".txt"))
+                {
+                    File newFile = new File(file.getPath() + ".txt");
+                    file = newFile;
+                    System.out.println(newFile);
+                }
+            }
 
-			if (fileChooser.getFileFilter() == txtFilter) {
-				if (!file.getName().toLowerCase().endsWith(".txt")) {
-					File newFile = new File(file.getPath() + ".txt");
-					file = newFile;
-					System.out.println(newFile);
-				}
-			}
+            currentFile = file;
 
-			currentFile = file;
+            fireSaveEvent(file, event);
+        }
+    }
 
-			fireSaveEvent(file, event);
-		}
-	}
+    @Override
+    public void onLoadFileClicked()
+    {
+        File file = fileChooser.showOpenDialog(window.getScene().getWindow());
 
-	@Override
-	public void onLoadFileClicked() {
-		int returnValue = fileChooser.showOpenDialog(window);
+        if (file != null)
+        {
+            currentFile = file;
+            fireLoadFileRequest(file);
+        }
 
-		if (returnValue == JFileChooser.APPROVE_OPTION) {
-			File file = fileChooser.getSelectedFile();
-			currentFile = file;
-			fireLoadFileRequest(file);
-		}
+    }
 
-	}
+    public void setSaveListener(SaveListener saveListener)
+    {
+        this.saveListener = saveListener;
+    }
 
-	public void setSaveListener(SaveListener saveListener) {
-		this.saveListener = saveListener;
-	}
+    public void setLoadFileListener(LoadFileListener loadFileListener)
+    {
+        this.loadFileListener = loadFileListener;
+    }
 
-	public void setLoadFileListener(LoadFileListener loadFileListener) {
-		this.loadFileListener = loadFileListener;
-	}
+    public void fireSaveEvent(File file, SaveEvent event)
+    {
+        if (saveListener != null)
+        { saveListener.onSaveRequest(file, event); }
+    }
 
-	public void fireSaveEvent(File file, SaveEvent event) {
-		if (saveListener != null)
-			saveListener.onSaveRequest(file, event);
-	}
+    public void fireLoadFileRequest(File file)
+    {
+        if (loadFileListener != null)
+        { loadFileListener.onLoadFileRequest(file); }
+    }
 
-	public void fireLoadFileRequest(File file) {
-		if (loadFileListener != null)
-			loadFileListener.onLoadFileRequest(file);
-	}
+    @Override
+    public void onIOError(IOErrorEvent event)
+    {
+        System.out.println(event.getErrorMessage());
+    }
 
-	@Override
-	public void onIOError(IOErrorEvent event) {
-		window.showMessage(event.getErrorMessage());
-	}
+    @Override
+    public void onFontsRecieved(FontsRecievedEvent event)
+    {
+        FontWindow.setFontNames(event.getFontNames());
+    }
 
-	@Override
-	public void onFontsRecieved(FontsRecievedEvent event) {
-		FontWindow.setFontNames(event.getFontNames());
-	}
-
-	@Override
-	public void onNewClicked() {
-		currentFile = null;
-	}
+    @Override
+    public void onNewClicked()
+    {
+        currentFile = null;
+    }
 }
