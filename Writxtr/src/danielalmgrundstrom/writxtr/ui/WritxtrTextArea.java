@@ -1,23 +1,39 @@
 package danielalmgrundstrom.writxtr.ui;
 
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.Border;
-import javafx.scene.text.Font;
+import javafx.embed.swing.SwingNode;
 
-public class WritxtrTextArea extends TextArea
+import javax.swing.*;
+import java.awt.*;
+
+public class WritxtrTextArea extends SwingNode
 {
+	private final JEditorPane editor;
 	private static final long serialVersionUID = 3556985998540653598L;
 
 	private boolean textChanged;
 	
 	public WritxtrTextArea(){
-		setBorder(Border.EMPTY);
+		editor = new JEditorPane();
+
+		this.setContent(editor);
 	}
 	
 	public void init(){
-        setFont(new Font("Arial", 12));
+        editor.setFont(new Font("Monospaced", Font.PLAIN, 12));
 	}
-	
+
+	public String getText() {
+        return editor.getText();
+    }
+
+	public void setText(String text) {
+        editor.setText(text);
+    }
+
+    public void selectAll() {
+        editor.selectAll();
+    }
+
 	public void setTextChanged(boolean b){
 		textChanged = b;
 	}
@@ -27,6 +43,6 @@ public class WritxtrTextArea extends TextArea
 	}
 	
 	public void deleteText(){
-		replaceSelection("");
+		editor.replaceSelection("");
 	}
 }
