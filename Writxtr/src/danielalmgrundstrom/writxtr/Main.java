@@ -36,6 +36,5 @@ public class Main extends Application
 
         primaryStage.setOnShown(window::onShown);
         primaryStage.setOnCloseRequest(window::onClose);
-
     }
 }

@@ -2,13 +2,15 @@ package danielalmgrundstrom.writxtr.ui;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
 import javafx.scene.control.Button;
+import javafx.scene.control.Separator;
 import javafx.scene.control.ToolBar;
+import javafx.scene.control.Tooltip;
 
 import danielalmgrundstrom.writxtr.beans.ToolBarEvent;
 import danielalmgrundstrom.writxtr.enums.ToolBarItem;
 import danielalmgrundstrom.writxtr.listeners.ToolBarListener;
-import javafx.scene.control.Tooltip;
 
 
 public class WritxtrToolBar extends ToolBar implements EventHandler<ActionEvent>
@@ -29,19 +31,19 @@ public class WritxtrToolBar extends ToolBar implements EventHandler<ActionEvent>
 	
 	public void init(){
 		newButton = new Button("New");
-		newButton.setPrefSize(24, 24);
+		newButton.setPrefSize(48, 24);
 		newButton.setTooltip(new Tooltip("New file"));
 
         openButton = new Button("Open");
-        openButton.setPrefSize(24, 24);
+        openButton.setPrefSize(48, 24);
         openButton.setTooltip(new Tooltip("Open"));
 		
 		saveButton = new Button("Save");
-		saveButton.setPrefSize(24, 24);
+		saveButton.setPrefSize(48, 24);
 		saveButton.setTooltip(new Tooltip("Save"));
 		
 		saveAsButton = new Button("Save As");
-		saveAsButton.setPrefSize(24, 24);
+		saveAsButton.setPrefSize(64, 24);
 		saveAsButton.setTooltip(new Tooltip("Save as"));
 		
 		newButton.addEventHandler(ActionEvent.ACTION, this);
@@ -49,10 +51,10 @@ public class WritxtrToolBar extends ToolBar implements EventHandler<ActionEvent>
 		saveAsButton.addEventHandler(ActionEvent.ACTION, this);
 		openButton.addEventHandler(ActionEvent.ACTION, this);
 				
-		getChildren().add(newButton);
-        getChildren().add(openButton);
-		getChildren().add(saveButton);
-		getChildren().add(saveAsButton);
+		getItems().add(newButton);
+        getItems().add(openButton);
+        getItems().add(saveButton);
+        getItems().add(saveAsButton);
 	}
 	
 	public void setToolBarListener(ToolBarListener toolBarListener){

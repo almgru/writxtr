@@ -7,13 +7,13 @@ import java.awt.*;
 
 public class WritxtrTextArea extends SwingNode
 {
-	private final JEditorPane editor;
+	private final JTextPane editor;
 	private static final long serialVersionUID = 3556985998540653598L;
 
 	private boolean textChanged;
 	
 	public WritxtrTextArea(){
-		editor = new JEditorPane();
+		editor = new JTextPane();
 
 		this.setContent(editor);
 	}
