@@ -73,3 +73,10 @@ crashlytics-build.properties
 hs_err_pid*
 
 META-INF/
+
+# Gradle
+.gradle
+/build/
+gradle-app.settings
+!gradle-wrapper.jar
+.gradletasknamecache
