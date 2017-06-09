@@ -1,4 +1,4 @@
-package writxtr.data.system;
+package writxtr.io.system;
 
 import writxtr.beans.FontsRecievedEvent;
 import writxtr.listeners.FontRequestListener;

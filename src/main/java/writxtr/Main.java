@@ -1,11 +1,13 @@
 package writxtr;
 
 import writxtr.controller.Controller;
-import writxtr.data.DataHandler;
+import writxtr.io.DataHandler;
 import writxtr.ui.MainView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 
 /**
  * Main class which launches the application and creates the components (DataHandler, MainView & Controller)
@@ -33,5 +35,7 @@ public class Main extends Application
 
         primaryStage.setOnShown(window::onShown);
         primaryStage.setOnCloseRequest(window::onClose);
+
+        SwingUtilities.invokeLater(() -> window.getWindowTextArea().init());
     }
 }

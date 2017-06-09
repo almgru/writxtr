@@ -1,7 +1,7 @@
-package writxtr.data;
+package writxtr.io;
 
-import writxtr.data.io.IOHandler;
-import writxtr.data.system.FontHandler;
+import writxtr.io.io.IOHandler;
+import writxtr.io.system.FontHandler;
 
 public class DataHandler {
 	

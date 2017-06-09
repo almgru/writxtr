@@ -2,7 +2,7 @@ package writxtr.controller;
 
 import writxtr.controller.data.IOController;
 import writxtr.controller.ui.WindowController;
-import writxtr.data.DataHandler;
+import writxtr.io.DataHandler;
 import writxtr.ui.MainView;
 
 public class Controller{

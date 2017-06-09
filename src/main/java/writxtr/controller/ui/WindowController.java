@@ -5,7 +5,7 @@ import writxtr.beans.LoadURLEvent;
 import writxtr.beans.SaveCompleteEvent;
 import writxtr.beans.SaveEvent;
 import writxtr.controller.Controller;
-import writxtr.data.system.FontHandler;
+import writxtr.io.system.FontHandler;
 import writxtr.listeners.*;
 import writxtr.ui.MainView;
 import javafx.scene.control.Alert;

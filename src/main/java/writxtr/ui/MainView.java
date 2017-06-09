@@ -8,6 +8,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.WindowEvent;
 
+import javax.swing.*;
+
 /**
  * Root pane of the application. Contains the following components:
  * <ul>
@@ -48,17 +50,16 @@ public class MainView extends BorderPane
         toolBar = new WritxtrToolBar();
         toolBar.init();
 
+        scrollPane = new ScrollPane();
+
         textArea = new WritxtrTextArea();
         textArea.init();
-        scrollPane = new ScrollPane(textArea);
-        scrollPane.setFitToWidth(true);
-        scrollPane.setFitToHeight(true);
 
         VBox topContainer = new VBox();
         topContainer.getChildren().addAll(menuBar, toolBar);
         setTop(topContainer);
 
-        setCenter(scrollPane);
+        setCenter(textArea);
 
         setMinSize(240, 120);
         setPrefSize(800, 600);

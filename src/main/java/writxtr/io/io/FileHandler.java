@@ -1,4 +1,4 @@
-package writxtr.data.io;
+package writxtr.io.io;
 
 import writxtr.beans.IOErrorEvent;
 import writxtr.beans.LoadFileEvent;
