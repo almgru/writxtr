@@ -13,12 +13,12 @@ import writxtr.beans.MenuEvent;
 import writxtr.enums.MenuItem;
 import writxtr.listeners.MenuListener;
 
-public class WritxtrMenuBar extends JMenuBar implements ActionListener {
+public class WritxtrMenuBar extends JMenuBar implements Menu, ActionListener {
 
 	private static final long serialVersionUID = -839100811136182450L;
 
 	// Listeners
-	private MenuListener menuListener;
+	private MenuObserver menuObserver;
 
 	// File Menu
 	private JMenu fileMenu;
@@ -48,6 +48,7 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 	public WritxtrMenuBar() {
 	}
 
+    @Override
 	public void init() {
 		newItem = new JMenuItem("New");
 		openItem = new JMenuItem("Open");
@@ -119,62 +120,65 @@ public class WritxtrMenuBar extends JMenuBar implements ActionListener {
 		add(helpMenu);
 	}
 
-	public void setMenuListener(MenuListener menuListener) {
-		this.menuListener = menuListener;
+    @Override
+	void setMenuObserver(MenuObserver observer) {
+		this.menuObserver = observer;
 	}
 
-	public void fireMenuEvent(MenuEvent event) {
-		if (menuListener != null)
-			menuListener.onMenuButtonClicked(event);
-	}
-
-	public void setCCPEnabled(boolean b) {
+    @Override
+	void setCCPEnabled(boolean b) {
 		copyItem.setEnabled(b);
 		cutItem.setEnabled(b);
 		deleteItem.setEnabled(b);
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent event) {
+	void actionPerformed(ActionEvent event) {
 
 		if (event.getSource() instanceof JMenuItem) {
-
 			// File Menu
-			if (event.getSource() == newItem)
+			if (event.getSource() == newItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.New));
-
-			else if (event.getSource() == saveItem)
+            }
+			else if (event.getSource() == saveItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Save));
-
-			else if (event.getSource() == saveAsItem)
+            }
+			else if (event.getSource() == saveAsItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.SaveAs));
-
-			else if (event.getSource() == openItem)
+            }
+			else if (event.getSource() == openItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.OpenFile));
-			
+            }
 			else if (event.getSource() == printItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Print));
 			}
-
-			else if (event.getSource() == quitItem)
+			else if (event.getSource() == quitItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Quit));
+            }
 
 			// Edit Menu
-			else if (event.getSource() == deleteItem)
+			else if (event.getSource() == deleteItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Delete));
-
-			else if (event.getSource() == selectAllItem)
+            }
+			else if (event.getSource() == selectAllItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.SelectAll));
+            }
 
 			// View Menu
-			else if (event.getSource() == fontItem){
+			else if (event.getSource() == fontItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.Font));
 			}
 			
 			// About Menu
-			else if (event.getSource() == aboutItem)
+			else if (event.getSource() == aboutItem) {
 				fireMenuEvent(new MenuEvent(MenuItem.About));
-			
+            }
 		}
 	}
+
+	private void dispatchMenuEvent(MenuEvent event) {
+		if (menuListener != null)
+			menuListener.onMenuButtonClicked(event);
+	}
+
 }

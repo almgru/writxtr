@@ -2,7 +2,6 @@ package writxtr.listeners;
 
 import writxtr.beans.MenuEvent;
 
-
-public interface MenuListener {
+public interface MenuObserver {
 	void onMenuButtonClicked(MenuEvent event);
 }

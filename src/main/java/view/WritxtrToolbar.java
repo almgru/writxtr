@@ -1,4 +1,4 @@
-package writxtr.ui;
+package writxtr.view;
 
 import java.awt.Dimension;
 
@@ -9,27 +9,26 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
-import writxtr.beans.ToolBarEvent;
-import writxtr.enums.ToolBarItem;
-import writxtr.listeners.ToolBarListener;
+import writxtr.beans.ToolbarEvent;
+import writxtr.enums.ToolbarItem;
+import writxtr.listeners.ToolbarObserver;
 
-
-public class WritxtrToolBar extends JToolBar implements ActionListener {
+class WritxtrToolbar extends JToolBar implements Toolbar, ActionListener {
 
 	private static final long serialVersionUID = -8630077100444271207L;
 
 	// Listeners
-	private ToolBarListener toolBarListener;
+	private ToolbarObserver toolbarObserver;
 	
 	private JButton newButton;
     private JButton openButton;
 	private JButton saveButton;
 	private JButton saveAsButton;
 	
-	public WritxtrToolBar(){
-	}
+	WritxtrToolbar() { }
 	
-	public void init(){
+    @Override
+	void init(){
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
 
 		newButton = new JButton(new ImageIcon(loader.getResource("new16.png")));
@@ -69,31 +68,33 @@ public class WritxtrToolBar extends JToolBar implements ActionListener {
 		setFloatable(false);
 	}
 	
-	public void setToolBarListener(ToolBarListener toolBarListener){
-		this.toolBarListener = toolBarListener;
-	}
-	
-	public void fireToolBarEvent(ToolBarEvent event){
-		if(toolBarListener != null)
-			toolBarListener.onButtonClicked(event);
+    @Override
+	public void setToolbarObserver(ToolbarObserver observer) {
+		this.toolbarObserver = observer;
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent event) {
+	void actionPerformed(ActionEvent event) {
 		
-		if (event.getSource() instanceof JButton){
-			if(event.getSource() == newButton)
-				fireToolBarEvent(new ToolBarEvent(ToolBarItem.New));
-			
-			else if(event.getSource() == saveButton)
-				fireToolBarEvent(new ToolBarEvent(ToolBarItem.Save));
-			
-			else if(event.getSource() == saveAsButton)
-				fireToolBarEvent(new ToolBarEvent(ToolBarItem.SaveAs));
-			
-			else if(event.getSource() == openButton)
-				fireToolBarEvent(new ToolBarEvent(ToolBarItem.OpenFile));
-			
+		if (event.getSource() instanceof JButton) {
+			if(event.getSource() == newButton) {
+				dispatchToolbarEvent(new ToolBarEvent(ToolBarItem.New));
+            }
+			else if(event.getSource() == saveButton) {
+				dispatchToolbarEvent(new ToolBarEvent(ToolBarItem.Save));
+            }
+			else if(event.getSource() == saveAsButton) {
+				dispatchToolbarEvent(new ToolBarEvent(ToolBarItem.SaveAs));
+            }
+			else if(event.getSource() == openButton) {
+				dispatchToolbarEvent(new ToolBarEvent(ToolBarItem.OpenFile));
+            }
 		}
 	}
+
+	private void dispatchToolbarEvent(ToolbarEvent event) {
+		if(toolbarObserver != null)
+			toolbarObserver.onButtonClicked(event);
+	}
 }
+

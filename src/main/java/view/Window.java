@@ -14,49 +14,51 @@ import writxtr.beans.MenuEvent;
 import writxtr.enums.MenuItem;
 import writxtr.listeners.FontChangedListener;
 
-public class Window extends JFrame {
+public class Window extends JFrame implements View {
 
 	private static final long serialVersionUID = -7559719994412678413L;
 
-	private FontChangedListener fontChangedListener;
+	private FontSelectedObserver fontSelectedObserver;
 	
 	// Menu bar
-	private WritxtrMenuBar menuBar;
+	private MenuView menu;
 
 	// Tool bar
-	private WritxtrToolBar toolBar;
+	private ToolbarView toolbar;
 
 	// Text Area
-	private WritxtrTextArea textArea;
+	private EditorView editor;
 	private JScrollPane scrollPane;
 	
 	// Font window
-	private FontWindow fontWindow;
+	private FontSelectorView fontSelector;
 	
 
 	public Window() {
 	}
 	
-	public void setFontChangedListener(FontChangedListener fontChangedListener){
-		this.fontChangedListener = fontChangedListener;
+    @Override
+	void setFontSelectedObserver(FontSelectedObserver observer){
+		this.fontSelectedObserver = observer;
 	}
 
-	public void init() {
+    @Override
+	void init() {
 		changeTitle("new text file");
 		
-		menuBar = new WritxtrMenuBar();
-		menuBar.init();
+		menu = new WritxtrMenuBar();
+		menu.init();
 		
-		toolBar = new WritxtrToolBar();
-		toolBar.init();
+		toolbar = new WritxtrToolBar();
+		toolbar.init();
 
-		textArea = new WritxtrTextArea();
-		textArea.init();
+		editor = new WritxtrTextArea();
+		editor.init();
 		scrollPane = new JScrollPane(textArea);
 
-		add(toolBar, BorderLayout.NORTH);
+		add(toolbar, BorderLayout.NORTH);
 		add(scrollPane, BorderLayout.CENTER);
-		setJMenuBar(menuBar);
+		setJMenuBar(menu);
 		
 		setMinimumSize(new Dimension(240, 120));
 		setSize(800, 600);
@@ -66,32 +68,39 @@ public class Window extends JFrame {
 		setVisible(true);
 	}
 
-	public WritxtrMenuBar getWindowMenuBar() {
-		return menuBar;
+    @Override
+	MenuView getMenu() {
+		return menu;
 	}
 
-	public WritxtrTextArea getWindowTextArea() {
-		return textArea;
+    @Override
+	EditorView getEditor() {
+		return editor;
 	}
 
-	public WritxtrToolBar getWindowToolBar() {
-		return toolBar;
+    @Override
+	ToolbarView getToolbar() {
+		return toolbar;
 	}
 	
-	public FontWindow getFontWindow(){
-		return fontWindow;
+    @Override
+	FontSelectorView getFontSelector(){
+		return fontSelector;
 	}
 
-	public void showMessage(String text) {
+    @Override
+	void showMessage(String text) {
 		JOptionPane.showMessageDialog(null, text);
 	}
 	
-	public void showFontWindow(){
-		fontWindow = new FontWindow(fontChangedListener);
-		fontWindow.init(true, this);
+    @Override
+	void openFontSelector(){
+		fontSelector = new FontWindow(fontChangedListener);
+		fontSelector.init(true, this);
 	}
 	
-	public void changeTitle(String fileName){
+    @Override
+	void changeTitle(String fileName){
 		setTitle(String.format("Writxtr - %s", fileName));
 	}
 	
@@ -106,12 +115,12 @@ public class Window extends JFrame {
 		addWindowListener(new WindowAdapter(){	
 			@Override
 			public void windowOpened(WindowEvent event) {
-				textArea.requestFocus();
+				editor.requestFocus();
 			}
 			
 			@Override
 			public void windowClosing(WindowEvent event){
-				menuBar.fireMenuEvent(new MenuEvent(MenuItem.Quit));
+				menu.fireMenuEvent(new MenuEvent(MenuItem.Quit));
 			}
 		});
 	}

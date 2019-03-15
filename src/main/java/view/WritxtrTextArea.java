@@ -1,4 +1,4 @@
-package writxtr.ui;
+package writxtr.view;
 
 import java.awt.Font;
 
@@ -7,17 +7,16 @@ import javax.swing.JTextArea;
 import javax.swing.event.CaretListener;
 import javax.swing.event.DocumentListener;
 
-public class WritxtrTextArea extends JTextArea {
+class WritxtrTextArea extends JTextArea implements Editor {
 
 	private static final long serialVersionUID = 3556985998540653598L;
 
-	private boolean textChanged;
-	
-	public WritxtrTextArea(){
+	WritxtrTextArea(){
 		setBorder(BorderFactory.createEmptyBorder());
 	}
 	
-	public void init(){
+    @Override
+	void init(){
 		setFont(new Font("Arial", Font.PLAIN, 12));
 	}
 	
@@ -29,15 +28,8 @@ public class WritxtrTextArea extends JTextArea {
 		getDocument().addDocumentListener(documentListener);
 	}
 	
-	public void setTextChanged(boolean b){
-		textChanged = b;
-	}
-	
-	public boolean getTextChanged(){
-		return textChanged;
-	}
-	
-	public void deleteText(){
+    @Override
+	void clearText(){
 		replaceSelection("");
 	}
 }
